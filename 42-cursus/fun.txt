@@ -1,0 +1,7 @@
+• toupper
+• tolower
+• strchr
+• strrchr
+• strncmp
+• strnstr
+• atoi

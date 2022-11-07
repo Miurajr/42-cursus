@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:12:10 by healexan          #+#    #+#             */
-/*   Updated: 2022/11/04 17:18:18 by healexan         ###   ########.fr       */
+/*   Updated: 2022/11/07 09:37:32 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,14 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	return (0);
 }
 
-int	main()
+/* int	main(void)
 {
-	char a[] = "teste";
-	char b[] = "vacaa";
+	char a[]	= "teste";
+	char b[]	= "vacaa";
 
 	printf("%d \n", memcmp(a, b, 4));
 	printf("%d", ft_memcmp(a, b, 4));
 
 	return (0);
 }
+ */
