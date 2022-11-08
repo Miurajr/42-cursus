@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 14:13:25 by healexan          #+#    #+#             */
-/*   Updated: 2022/11/04 14:34:12 by healexan         ###   ########.fr       */
+/*   Updated: 2022/11/08 15:43:53 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,16 @@ void	*ft_memset(void *str, int c, size_t n)
 	return (str);
 }
 
-/* int		main()
+ int		main()
 {
 	char a[] = "Esta frase não tem nada cá dentro.";
 	char b[] = "Esta frase não tem nada cá dentro.";
-	char c = 's';
+	char c = 't';
+	
 	printf("\n%s \n", a);
 	memset(a + 5, c, 2);
 	printf("%s\n", a);
 	printf("\n%s \n", b);
-	ft_memset(b + 5, c, 2);
+	ft_memset(b + 2, c, 2);
 	printf("%s\n", b);
 } */
