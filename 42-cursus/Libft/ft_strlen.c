@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 12:06:34 by healexan          #+#    #+#             */
-/*   Updated: 2022/11/07 13:51:33 by healexan         ###   ########.fr       */
+/*   Updated: 2022/11/09 14:03:53 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ size_t	ft_strlen(const char *c)
 		i++;
 	return (i);
 }
-
-/* int	main(void)
+/* 
+int	main(void)
 {
 	char	*c;
 
-	c = "hello world";
-	printf("Your string size is: %i\n", ft_strlen(c));
+	c = "teste";
+	printf("Your string size is: %zu\n", ft_strlen(c));
 }
  */
