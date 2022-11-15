@@ -1,48 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 15:33:00 by healexan          #+#    #+#             */
-/*   Updated: 2022/11/08 14:47:23 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/07 13:16:40 by healexan          #+#    #+#             */
+/*   Updated: 2022/11/14 17:23:22 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
+	size_t	srclen;
 	size_t	i;
-	size_t	dsz;
 
-	dsz = ft_strlen(dst);
-	if (size <= dsz)
-		return (size + dsz);
+	srclen = ft_strlen(src);
+	if (!dest || !src)
+		return (0);
+	if (size == 0)
+		return (srclen);
 	i = 0;
-	while (src[i] != '\0' && dsz + 1 < size)
-	{
-		dst[dsz] = src[i];
-		i++;
-		dsz++;
-	}
-	dst[dsz] = '\0';
-	return (ft_strlen(dst));
+		while (src[i] != '\0' && i < (size - 1))
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+	return (srclen);
 }
 
 /* int		main()
 {
-	char a[] = " Junior";
-	char b[] = "Henrique";
+	char a[] = "Ola, quem fala?";
+	char b[] = "Sou eu.";
 
-	char c[] = " Junior";
-	char d[] = "Henrique";
+	char c[] = "Ola, quem fala?";
+	char d[] = "Sou eu.";
 
-	printf("%ld\nOriginal:\n", strlcat(b, a, 20));
+	printf("%zu\n", strlcpy(b, a, -55));
 	printf("%s\n", b);
 
-	printf("\n%ld\nMinha:\n", ft_strlcat(d, c, 20));
+	printf("\n%zu\n", ft_strlcpy(d, c, -55));
 	printf("%s\n", d);
 
 	return (0);

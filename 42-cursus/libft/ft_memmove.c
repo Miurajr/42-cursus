@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 10:02:29 by healexan          #+#    #+#             */
-/*   Updated: 2022/11/09 17:49:21 by healexan         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:16:12 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,19 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		i = n - 1;
 		while (i < n)
 		{
-			((char *)dest)[i] = ((char *)src)[i];
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 			i--;
 		}
 	}	
 	else
 	{
-		while (src > dest)
+		while (i < n)
 		{
-			ft_memcpy(dest, src, n);
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			i++;
 		}
 	}
-	return (dest);
+	return ((unsigned char *)dest);
 }
 
 /* int		main()
@@ -48,6 +49,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	//printf("%s\n", dest1);
 
 	printf("\n%s \n", dest1);
-	ft_memmove(dest1, src, 20);
+	ft_memmove(dest1, src, 10);
 	printf("%s\n", dest1);
 } */

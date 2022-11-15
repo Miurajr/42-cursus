@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 16:12:10 by healexan          #+#    #+#             */
-/*   Updated: 2022/11/07 09:37:32 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/09 14:07:33 by healexan          #+#    #+#             */
+/*   Updated: 2022/11/14 17:11:52 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *str1, const void *str2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (i < n)
-	{
-		if (((char *)str1)[i] != ((char *)str2)[i])
-			return (((char *)str1)[i] - ((char *)str2)[i]);
+	while ((s1[i] == s2[i]) && s1[i] && s2[i] && i < n)
 		i++;
-	}
-	return (0);
+	if (n == i || n == i)
+		return (0);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
 /* int	main(void)
 {
-	char a[]	= "teste";
-	char b[]	= "vacaa";
+	char a[] = "abcdG";
+	char b[] = "abcdg";
 
-	printf("%d \n", memcmp(a, b, 4));
-	printf("%d", ft_memcmp(a, b, 4));
-
+	printf("original:\n%d", strncmp(a, b, 5));
+	printf("\nMinha:\n%d", strncmp(a, b, 5));
 	return (0);
-}
- */
+} */
