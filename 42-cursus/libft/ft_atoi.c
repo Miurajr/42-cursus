@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 17:09:29 by healexan          #+#    #+#             */
-/*   Updated: 2022/11/14 18:35:35 by healexan         ###   ########.fr       */
+/*   Updated: 2022/11/16 14:47:59 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,10 @@ int	ft_atoi(const char *str)
 	return ((int)res * sign);
 }
 
-/* int        main()
+/* 
+int	main(void)
 {
-    char a[] = "+12323456784s2nhbujbnjhnhujnjhnjhnjknjnkjnjkmwsexdrcftvgybnh,p.lo;[']3";
+    char a[] = "+12323456784srcftvgybn";
 
 
     printf("\n%d \n", atoi(a));

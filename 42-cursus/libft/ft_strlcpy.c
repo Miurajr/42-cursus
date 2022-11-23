@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:16:40 by healexan          #+#    #+#             */
-/*   Updated: 2022/11/14 17:23:22 by healexan         ###   ########.fr       */
+/*   Updated: 2022/11/16 13:47:44 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	if (size == 0)
 		return (srclen);
 	i = 0;
-		while (src[i] != '\0' && i < (size - 1))
-		{
-			dest[i] = src[i];
+	while (src[i] != '\0' && i < (size - 1))
+	{
+		dest[i] = src[i];
 			i++;
-		}
+	}
 		dest[i] = '\0';
 	return (srclen);
 }

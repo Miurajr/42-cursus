@@ -1,24 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 12:50:22 by healexan          #+#    #+#             */
-/*   Updated: 2022/11/21 10:53:24 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/16 10:38:06 by healexan          #+#    #+#             */
+/*   Updated: 2022/11/16 13:27:56 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	*ptr;
+	char	*substr;
+	size_t	i;
+	size_t	star;
 
-	ptr = malloc(nmemb * size);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, (nmemb * size));
-	return (ptr);
+	substr = (char *)malloc(len + 1);
+	if (!s || !substr)
+		return (0);
+	i = 0;
+	star = start;
+	while (star < ft_strlen(s) && i < len)
+		substr[i++] = s[star++];
+	substr[i] = '\0';
+	return (substr);
 }
+
+/* 
+int	main(void)
+{
+	char s[] = "Macacos me mordam";
+
+	printf("%s\n", ft_substr(s, 1, 10));
+} */
