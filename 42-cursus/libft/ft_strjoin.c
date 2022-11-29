@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 13:30:43 by healexan          #+#    #+#             */
-/*   Updated: 2022/11/16 14:26:36 by healexan         ###   ########.fr       */
+/*   Updated: 2022/11/25 12:40:17 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	s1len;
-	size_t	s2len;
 	size_t	i;
 	size_t	j;
-	char	*newstr;
+	char	*new_str;
+	size_t	len_s1;
+	size_t	len_s2;
 
-	if (!s1 || !s2)
-		return (NULL);
-	s1len = ft_strlen(s1);
-	s2len = ft_strlen(s2);
-	newstr = ((char *)malloc((s1len + s2len) + 1));
-	if (!newstr)
+	if (!s1)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s1[j])
-		newstr[i++] = s1[j++];
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	new_str = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
+	if (new_str == NULL)
+		return (NULL);
+	while (j < len_s1)
+		new_str[i++] = s1[j++];
 	j = 0;
-	while (s2[j])
-		newstr[i++] = s2[j++];
-	newstr[i] = '\0';
-	return (newstr);
+	while (j < len_s2)
+		new_str[i++] = s2[j++];
+	new_str[i] = '\0';
+	return (new_str);
 }
 
 /* int	main(void)

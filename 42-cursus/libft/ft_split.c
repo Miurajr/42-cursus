@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:00:53 by healexan          #+#    #+#             */
-/*   Updated: 2022/11/22 18:20:23 by healexan         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:47:53 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ char	**ft_split(char const *s, char c)
 		while (s[i] == c)
 			i++;
 		ptr[sw] = ft_substr(s, i, count_letters(s, c, i));
-		printf("%s\n", ptr[sw]);
 		i += count_letters(s, c, i);
 	}
 	ptr[sw] = 0;

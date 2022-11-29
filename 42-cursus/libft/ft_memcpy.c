@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 17:12:54 by healexan          #+#    #+#             */
-/*   Updated: 2022/11/04 11:56:11 by healexan         ###   ########.fr       */
+/*   Updated: 2022/11/25 12:33:58 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		return (NULL);
 	dest_cpy = (unsigned char *) dest;
 	src_cpy = (unsigned char *) src;
-	while (i < n && src_cpy[i] != '\0')
+	while (i < n)
 	{
 		*(dest_cpy + i) = *(src_cpy + i);
 		i++;

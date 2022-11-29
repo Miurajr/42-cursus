@@ -6,7 +6,7 @@
 #    By: healexan <healexan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/14 14:50:12 by healexan          #+#    #+#              #
-#    Updated: 2022/11/23 16:08:07 by healexan         ###   ########.fr        #
+#    Updated: 2022/11/25 15:58:01 by healexan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ SRC = ft_atoi.c \
 	  ft_tolower.c \
 	  ft_itoa.c \
 	  ft_strmapi.c \
+	  ft_striteri.c \
 	  ft_toupper.c
 	  
 BONUS = ft_lstadd_front.c \
@@ -54,7 +55,8 @@ BONUS = ft_lstadd_front.c \
 		ft_lstadd_back.c \
 		ft_lstdelone.c \
 		ft_lstclear.c \
-		ft_lstiter.c 
+		ft_lstiter.c \
+		ft_lstmap.c 
 		
 OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS:.c=.o)
