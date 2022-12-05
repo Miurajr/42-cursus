@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 14:44:44 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:33 by healexan         ###   ########.fr       */
+/*   Updated: 2022/12/03 18:43:03 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_read(int fd, char *s)
 	if (!str)
 		return (NULL);
 	readcontrol = 1;
-	while (ft_strchr(s, '\n' && readcontrol != 0))
+	while (ft_strchr(s) && readcontrol != 0)
 	{
 		readcontrol = read(fd, str, BUFFER_SIZE);
 		if (readcontrol < 0)
@@ -29,8 +29,8 @@ char	*ft_read(int fd, char *s)
 			free(str);
 			return (NULL);
 		}
-		str[readcontrol] = '\0'
-		s = ft_free_join(s, str);
+		str[readcontrol] = '\0';
+		s = ft_strjoin(s, str);
 	}
 	free(str);
 	return (s);

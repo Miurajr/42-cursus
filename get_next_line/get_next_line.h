@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 14:50:06 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:35 by healexan         ###   ########.fr       */
+/*   Updated: 2022/12/03 18:42:55 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,11 @@
 #include <sys/uio.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <stdio.h>
 
-size_t	ft_strlen(char *c);
+size_t	ft_strlen(const char *c);
 
-char	*ft_strchr(char *str, int c);
-char	*ft_free_join(char *s1, char *s2);
+char	*ft_strchr(const char *s);
+char	*ft_strjoin(char *s1, char *s2);
 char	*ft_new_line(char *s);
 char	*ft_get_line(char *s);
 char	*get_next_line(int fd);
