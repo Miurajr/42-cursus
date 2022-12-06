@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 15:23:11 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/03 18:42:56 by healexan         ###   ########.fr       */
+/*   Updated: 2022/12/06 17:42:56 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,8 @@ char	*ft_get_line(char *s)
 		str[i] = s[i];
 		i++;
 	}
+	if (s[i] == '\n')
+		str[i++] = '\n';
 	str[i] = '\0';
 	return (str);
 }
