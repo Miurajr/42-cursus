@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 10:14:21 by mamaral-          #+#    #+#             */
-/*   Updated: 2022/12/06 17:25:16 by healexan         ###   ########.fr       */
+/*   Updated: 2022/12/06 18:35:00 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ int	main(void)
 	printf("-%s", ptrs);
 	ptrs = get_next_line(fd);
 	printf("-%s", ptrs);
+	free(ptrs);
 	close(fd);
 }
