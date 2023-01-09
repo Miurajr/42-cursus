@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar_pf.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/03 16:36:46 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/09 17:12:16 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/17 16:38:21 by healexan          #+#    #+#             */
+/*   Updated: 2023/01/09 17:10:05 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include "libft/libft.h"
-# include <stdarg.h>
-# include <stdio.h>
+int	ft_putchar_pf(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
 
-#endif
+/* int	main(void)
+{
+	const char teste[] = "abcde";
+	ft_putchar_pf(teste[0]);
+	return (0);	
+}
+ */
