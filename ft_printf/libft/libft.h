@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 15:34:46 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/09 17:11:50 by healexan         ###   ########.fr       */
+/*   Updated: 2023/01/10 19:18:13 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int		ft_lstsize(t_list *lst);
 int		ft_atoi(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
-int		ft_putchar_pf(char c);
+int		ft_putchar_pf(int c);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);

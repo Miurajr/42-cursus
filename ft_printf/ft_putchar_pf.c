@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar_pf.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/03 16:36:46 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/10 19:43:50 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/17 16:38:21 by healexan          #+#    #+#             */
+/*   Updated: 2023/01/10 19:41:03 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <stdio.h>
-# include <unistd.h>
+int	ft_putchar_pf(int c)
+{
+	write(1, &c, 1);
+	return (1);
+}
 
-int		ft_putchar_pf(int c);
-
-#endif
+/* int	main(void)
+{
+	const char teste[] = "abcde";
+	ft_putchar_pf(teste[0]);
+	return (0);	
+}
+ */

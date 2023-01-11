@@ -6,12 +6,11 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 16:21:43 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/09 19:30:21 by healexan         ###   ########.fr       */
+/*   Updated: 2023/01/10 20:00:26 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft/libft.h"
 
 int	ft_type(char c, va_list args)
 {
@@ -19,10 +18,11 @@ int	ft_type(char c, va_list args)
 
 	count = 0;
 	if (c == 'c')
-		count += ft_putchar_pf(va_arg(args, char));
+		count += ft_putchar_pf(va_arg(args, int));
 	else if (c == 's')
-		
+	count += 1;
 }
+
 int	ft_printf(const char *str, ...)
 {
 	int		i;
@@ -46,4 +46,12 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end(args);
 	return (lenght);
+}
+
+int	main(void)
+{
+	char *c = "abcde";
+
+	printf("Printf real == Resultado: %c\n", c[1]);
+	ft_printf("Printf meu == Resultado: %c\n", c[1]);
 }
