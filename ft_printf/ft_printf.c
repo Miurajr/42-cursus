@@ -6,11 +6,14 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 16:21:43 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/10 20:00:26 by healexan         ###   ########.fr       */
+/*   Updated: 2023/01/12 18:42:12 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "libft/libft.h"
+#include <stdarg.h>
+#include <stdio.h>
 
 int	ft_type(char c, va_list args)
 {
@@ -20,7 +23,10 @@ int	ft_type(char c, va_list args)
 	if (c == 'c')
 		count += ft_putchar_pf(va_arg(args, int));
 	else if (c == 's')
-	count += 1;
+		count += ft_putstr_pf(va_arg(args, char *));
+	else if (c == '%')
+		count += ft_putchar_pf('%');
+	return (count);
 }
 
 int	ft_printf(const char *str, ...)
@@ -45,13 +51,20 @@ int	ft_printf(const char *str, ...)
 			lenght += ft_putchar_pf(str[i]);
 	}
 	va_end(args);
+	printf("lenght: %d\n", lenght);
 	return (lenght);
 }
 
 int	main(void)
 {
-	char *c = "abcde";
+	char *c = "Cona de sabao";
 
-	printf("Printf real == Resultado: %c\n", c[1]);
-	ft_printf("Printf meu == Resultado: %c\n", c[1]);
+	printf("Printf real == Resultado Char: %c\n", c[1]);
+	ft_printf("Printf meu == Resultado Char: %c\n", c[1]);
+	printf("=================//=================\n");
+	printf("Printf real == Resultado STR: %s\n", c);
+	ft_printf("Printf meu == Resultado STR: %s\n", c);
+	printf("=================//=================\n");
+	printf("Printf real == Resultado Porcento: %%\n");
+	ft_printf("Printf meu == Resultado Porcento: %%\n");
 }

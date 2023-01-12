@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 15:34:46 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/10 19:18:13 by healexan         ###   ########.fr       */
+/*   Updated: 2023/01/12 16:34:56 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+int		ft_putchar_pf(int c);
+int		ft_putstr_pf(char *s);
+int		ft_putnbr_pf(int n);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_isalnum(int c);
@@ -37,7 +40,6 @@ int		ft_lstsize(t_list *lst);
 int		ft_atoi(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
-int		ft_putchar_pf(int c);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);

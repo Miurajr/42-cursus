@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/03 16:36:46 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/12 14:34:07 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/17 16:51:12 by healexan          #+#    #+#             */
+/*   Updated: 2023/01/12 18:22:11 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <stdarg.h>
-# include <stdio.h>
-# include <unistd.h>
-# include "libft/libft.h"
+int	ft_putstr_pf(char *s)
+{
+	int	i;
 
-#endif
+	i = 0;
+	if (s != NULL)
+	{
+		while (s[i])
+		{
+			ft_putchar_pf(s[i]);
+			i++;
+		}		
+	}
+	return (i);
+}
+
+/* int	main(void)
+{
+	ft_putstr("só funciona12345\n");
+	return (0);
+}
+ */
