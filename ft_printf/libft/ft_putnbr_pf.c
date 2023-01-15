@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 18:15:15 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/12 18:22:57 by healexan         ###   ########.fr       */
+/*   Updated: 2023/01/13 15:42:22 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,9 @@ int	ft_putnbr_pf(int n)
 	return (count);
 }
  */
-int	main(void)
+/* int	main(void)
 {
 	double n = 30.5;
 	ft_putnbr_pf(n);
 }
+ */
