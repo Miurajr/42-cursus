@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_pf.c                                    :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/17 16:38:21 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/10 19:41:03 by healexan         ###   ########.fr       */
+/*   Created: 2023/01/16 16:41:55 by healexan          #+#    #+#             */
+/*   Updated: 2023/01/16 17:28:38 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "libft/libft.h"
 
-int	ft_putchar_pf(int c)
+int	ft_putptr(void *p)
 {
-	write(1, &c, 1);
-	return (1);
-}
+	int	count;
 
-/* int	main(void)
-{
-	const char teste[] = "abcde";
-	ft_putchar_pf(teste[0]);
-	return (0);	
+	if (!p)
+		return (ft_putstr_pf("(nil)"));
+	count = 0;
+	count += ft_putstr_pf("0x");
+	count += ft_puthex((unsigned long long)p, 'x');
+	return (count);
 }
- */

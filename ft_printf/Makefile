@@ -6,16 +6,16 @@
 #    By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/12 18:31:41 by healexan          #+#    #+#              #
-#    Updated: 2023/01/12 18:43:00 by healexan         ###   ########.fr        #
+#    Updated: 2023/01/16 16:51:50 by healexan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
-SRCS = ft_putchar_pf.c ft_printf.c ft_putstr_pf.c
+SRC = ft_printf.c ft_puthex.c ft_putptr.c
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRC:.c=.o)
 
 all: $(NAME)
 
