@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 16:21:43 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/16 17:42:24 by healexan         ###   ########.fr       */
+/*   Updated: 2023/01/18 16:40:26 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_type(char c, va_list args)
 	else if (c == 'x' || c == 'X')
 		count += ft_puthex(va_arg(args, unsigned long), c);
 	else if (c == 'p')
-		count += ft_putptr(va_arg(args, char *));
+		count += ft_putptr(va_arg(args, void *));
 	return (count);
 }
 
@@ -58,8 +58,8 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (lenght);
 }
-
-/*  int	main(void)
+/* 
+ int	main(void)
 {
 	void *p = (void *) main;
 	char *c = "teste do teste";
@@ -86,5 +86,4 @@ int	ft_printf(const char *str, ...)
 	printf("=================//=================\n");
 	ft_printf("Printf meu  == Resultado ptrbraga: %p\n", p);
 	printf("Printf Real == Resultado ptrbraga: %p\n", p);
-}
- */
+} */

@@ -6,27 +6,26 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:04:52 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/16 17:05:17 by healexan         ###   ########.fr       */
+/*   Updated: 2023/01/18 16:35:02 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ft_printf/ft_printf.h"
+#include "ft_printf.h"
 
  int	main(void)
 {
-	/*oid *p = (void *) main;
+	void *p = (void *) main;
 	char *c = "teste do teste";
 	unsigned int b = -1;
-	int a = 9999;*/
-	char	*nul = NULL;
+	int a = 9999;
 
-	//printf("Printf real == Resultado Char: %c\n", c[1]);
-	//ft_printf("Printf meu  == Resultado Char: %c\n", c[1]);
+	printf("Printf real == Resultado Char: %c\n", c[1]);
+	ft_printf("Printf meu  == Resultado Char: %c\n", c[1]);
 	printf("=================//=================\n");
-	printf("Printf real == Resultado STR: %s\n", nul);
-	ft_printf("Printf meu  == Resultado STR: %s\n", nul);/*
+	printf("Printf real == Resultado STR: %s\n", c);
+	ft_printf("Printf meu  == Resultado STR: %s\n", c);
 	printf("=================//=================\n");
-	("Printf real == Resultado Porcento: %%\n");
+	printf("Printf real == Resultado Porcento: %%\n");
 	ft_printf("Printf meu  == Resultado Porcento: %%\n");
 	printf("=================//=================\n");
 	printf("Printf real == Resultado Unsigned: %u\n", b);
@@ -39,5 +38,5 @@
 	printf("Printf Real == Resultado ptr: %p\n", c);
 	printf("=================//=================\n");
 	ft_printf("Printf meu  == Resultado ptrbraga: %p\n", p);
-	printf("Printf Real == Resultado ptrbraga: %p\n", p);*/
+	printf("Printf Real == Resultado ptrbraga: %p\n", p);
 }
