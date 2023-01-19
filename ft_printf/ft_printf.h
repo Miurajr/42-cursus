@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 16:36:46 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/18 17:26:35 by healexan         ###   ########.fr       */
+/*   Updated: 2023/01/19 17:46:22 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <string.h>
 # include <bsd/string.h>
 # include <stddef.h>
+# include <limits.h>
 # include "libft/libft.h"
 
 int	ft_puthex(unsigned long c, char base);

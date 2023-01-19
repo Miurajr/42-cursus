@@ -6,16 +6,16 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:41:55 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/18 15:47:28 by healexan         ###   ########.fr       */
+/*   Updated: 2023/01/19 14:18:55 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft/libft.h"
+#include <stddef.h>
 
 int	ft_putptr(void *p)
 {
-	int	count;
+	size_t	count;
 
 	if (!p)
 		return (ft_putstr_pf("(nil)"));

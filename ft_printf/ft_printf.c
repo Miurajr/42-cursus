@@ -6,15 +6,16 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 16:21:43 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/18 16:40:26 by healexan         ###   ########.fr       */
+/*   Updated: 2023/01/19 16:13:21 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stddef.h>
 
 int	ft_type(char c, va_list args)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	if (c == 'c')
@@ -28,7 +29,7 @@ int	ft_type(char c, va_list args)
 	else if (c == 'u')
 		count += ft_uputnbr_pf(va_arg(args, unsigned int));
 	else if (c == 'x' || c == 'X')
-		count += ft_puthex(va_arg(args, unsigned long), c);
+		count += ft_puthex(va_arg(args, unsigned int), c);
 	else if (c == 'p')
 		count += ft_putptr(va_arg(args, void *));
 	return (count);

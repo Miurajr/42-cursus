@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 15:34:46 by healexan          #+#    #+#             */
-/*   Updated: 2023/01/18 15:54:34 by healexan         ###   ########.fr       */
+/*   Updated: 2023/01/19 16:07:47 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <string.h>
 # include <bsd/string.h>
 # include <stddef.h>
+# include <limits.h>
 
 typedef struct s_list
 {
