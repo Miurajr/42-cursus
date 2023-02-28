@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:06:46 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:34 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/15 12:50:22 by healexan          #+#    #+#             */
+/*   Updated: 2022/11/21 10:53:24 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int	i;
+	size_t	*ptr;
 
-	i = 0;
-	while (s[i] != c)
-	{
-		if (s[i] == '\0')
-			return (NULL);
-		i++;
-	}
-	return ((char *)s + i);
+	ptr = malloc(nmemb * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, (nmemb * size));
+	return (ptr);
 }
-
-/* int	main(void)
-{
-	char s[] = "bicicleta";
-	char c = 'c';
-	printf("%s\n", ft_strchr(s, c));
-}
- */

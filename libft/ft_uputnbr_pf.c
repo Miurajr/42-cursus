@@ -1,35 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_uputnbr_pf.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:06:46 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:34 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/17 18:15:15 by healexan          #+#    #+#             */
+/*   Updated: 2023/01/16 13:36:50 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_uputnbr_pf(unsigned int n)
 {
-	int	i;
+	char	*str;
+	int		count;
 
-	i = 0;
-	while (s[i] != c)
-	{
-		if (s[i] == '\0')
-			return (NULL);
-		i++;
-	}
-	return ((char *)s + i);
+	str = ft_uitoa(n);
+	count = ft_putstr_pf(str);
+	free(str);
+	return (count);
 }
+/* {
+	int				count;
+	unsigned int	nb;
 
+	count = 0;
+	if (n < 0)
+	{
+		count += ft_putchar_pf('-');
+		nb = (unsigned int)(n * -1);
+	}
+	else
+	{
+		nb = (unsigned)n;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr_pf(nb / 10);
+	}
+	count += ft_putchar_pf((nb % 10 + '0'));
+	return (count);
+}
+ */
 /* int	main(void)
 {
-	char s[] = "bicicleta";
-	char c = 'c';
-	printf("%s\n", ft_strchr(s, c));
+	double n = 30.5;
+	ft_putnbr_pf(n);
 }
  */

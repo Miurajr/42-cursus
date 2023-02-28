@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:06:46 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:34 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/08 15:01:13 by healexan          #+#    #+#             */
+/*   Updated: 2022/11/08 15:05:26 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_tolower(int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != c)
+	if (c >= 65 && c <= 90)
 	{
-		if (s[i] == '\0')
-			return (NULL);
-		i++;
+		return (c +32);
 	}
-	return ((char *)s + i);
+	return (c);
 }
 
-/* int	main(void)
+/* int	main()
 {
-	char s[] = "bicicleta";
-	char c = 'c';
-	printf("%s\n", ft_strchr(s, c));
-}
- */
+	char c = 'a';
+	printf("%c\n", ft_tolower(c));
+		char b = 'Z';
+	printf("%c", ft_tolower(b));
+} */

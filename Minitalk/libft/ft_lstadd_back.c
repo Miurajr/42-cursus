@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:06:46 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:34 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/23 13:22:43 by healexan          #+#    #+#             */
+/*   Updated: 2022/11/23 14:13:35 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	i;
+	t_list	*back;
 
-	i = 0;
-	while (s[i] != c)
+	if (!new)
+		return ;
+	if (!(*lst))
 	{
-		if (s[i] == '\0')
-			return (NULL);
-		i++;
+		*lst = new;
+		return ;
 	}
-	return ((char *)s + i);
+	back = ft_lstlast(*lst);
+	back->next = new;
 }
-
-/* int	main(void)
-{
-	char s[] = "bicicleta";
-	char c = 'c';
-	printf("%s\n", ft_strchr(s, c));
-}
- */

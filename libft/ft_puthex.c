@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:06:46 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:34 by healexan         ###   ########.fr       */
+/*   Created: 2023/01/13 16:07:01 by healexan          #+#    #+#             */
+/*   Updated: 2023/01/19 16:13:37 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_puthex(unsigned long c, const char base)
 {
-	int	i;
+	int		count;
 
-	i = 0;
-	while (s[i] != c)
+	count = 0;
+	if (c >= 16)
 	{
-		if (s[i] == '\0')
-			return (NULL);
-		i++;
+		count += ft_puthex(c / 16, base);
+		count += ft_puthex(c % 16, base);
 	}
-	return ((char *)s + i);
+	else if (c <= 9)
+		count += ft_putchar_pf(c + '0');
+	else if (base == 'x')
+		count += ft_putchar_pf((c - 10) + 'a');
+	else if (base == 'X')
+		count += ft_putchar_pf((c - 10) + 'A');
+	return (count);
 }
-
-/* int	main(void)
-{
-	char s[] = "bicicleta";
-	char c = 'c';
-	printf("%s\n", ft_strchr(s, c));
-}
- */

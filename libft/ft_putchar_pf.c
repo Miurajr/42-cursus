@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_pf.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:06:46 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:34 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/17 16:38:21 by healexan          #+#    #+#             */
+/*   Updated: 2023/01/19 16:11:56 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_putchar_pf(int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != c)
-	{
-		if (s[i] == '\0')
-			return (NULL);
-		i++;
-	}
-	return ((char *)s + i);
+	write(1, &c, 1);
+	return (1);
 }
 
 /* int	main(void)
 {
-	char s[] = "bicicleta";
-	char c = 'c';
-	printf("%s\n", ft_strchr(s, c));
+	const char teste[] = "abcde";
+	ft_putchar_pf(teste[0]);
+	return (0);	
 }
  */

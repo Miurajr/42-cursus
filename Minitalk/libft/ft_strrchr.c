@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:06:46 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:34 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/09 12:00:03 by healexan          #+#    #+#             */
+/*   Updated: 2022/11/09 14:22:44 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int	s_len;
 
-	i = 0;
-	while (s[i] != c)
+	s_len = ft_strlen(s);
+	while (s_len >= 0)
 	{
-		if (s[i] == '\0')
-			return (NULL);
-		i++;
+		if (s[s_len] == c)
+			return ((char *)s + s_len);
+		s_len--;
 	}
-	return ((char *)s + i);
+	return (0);
 }
 
 /* int	main(void)
 {
-	char s[] = "bicicleta";
-	char c = 'c';
-	printf("%s\n", ft_strchr(s, c));
-}
- */
+	char s[] = "42537";
+	char c = '2';
+	printf("%s\n", ft_strrchr(s, c));
+} */

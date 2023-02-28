@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:06:46 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:34 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/23 15:13:37 by healexan          #+#    #+#             */
+/*   Updated: 2022/11/23 16:07:45 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != c)
+	if (lst && del)
 	{
-		if (s[i] == '\0')
-			return (NULL);
-		i++;
+		del(lst->content);
+		free(lst);
 	}
-	return ((char *)s + i);
 }
-
-/* int	main(void)
-{
-	char s[] = "bicicleta";
-	char c = 'c';
-	printf("%s\n", ft_strchr(s, c));
-}
- */

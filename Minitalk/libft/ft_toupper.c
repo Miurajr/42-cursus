@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:06:46 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:34 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/08 14:47:40 by healexan          #+#    #+#             */
+/*   Updated: 2022/11/08 15:19:41 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_toupper(int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != c)
+	if (c >= 97 && c <= 122)
 	{
-		if (s[i] == '\0')
-			return (NULL);
-		i++;
+		return (c -32);
 	}
-	return ((char *)s + i);
+	return (c);
 }
 
-/* int	main(void)
+/* int	main()
 {
-	char s[] = "bicicleta";
-	char c = 'c';
-	printf("%s\n", ft_strchr(s, c));
-}
- */
+	char c = 'x';
+	printf("%c", ft_toupper(c));
+} */

@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: healexan <healexan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:06:46 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:34 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/03 11:14:54 by healexan          #+#    #+#             */
+/*   Updated: 2022/11/03 16:02:25 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_isascii(int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != c)
-	{
-		if (s[i] == '\0')
-			return (NULL);
-		i++;
-	}
-	return ((char *)s + i);
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }
 
 /* int	main(void)
 {
-	char s[] = "bicicleta";
-	char c = 'c';
-	printf("%s\n", ft_strchr(s, c));
+	int	c;
+
+	c = '😏';
+	printf("this is not a ascii char: %i\n", ft_isascii(c));
+	c = '4';
+	printf("this is a ascii char: %i\n", ft_isascii(c));
 }
  */

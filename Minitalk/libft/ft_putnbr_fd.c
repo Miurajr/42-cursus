@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:06:46 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:34 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/17 18:15:15 by healexan          #+#    #+#             */
+/*   Updated: 2022/11/18 17:43:18 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
+	unsigned int	nb;
 
-	i = 0;
-	while (s[i] != c)
+	if (n < 0)
 	{
-		if (s[i] == '\0')
-			return (NULL);
-		i++;
+		ft_putchar_fd('-', fd);
+		nb = (unsigned int)(n * -1);
 	}
-	return ((char *)s + i);
+	else
+	{
+		nb = (unsigned)n;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+	}
+	ft_putchar_fd((nb % 10 + '0'), fd);
 }
-
-/* int	main(void)
-{
-	char s[] = "bicicleta";
-	char c = 'c';
-	printf("%s\n", ft_strchr(s, c));
-}
- */

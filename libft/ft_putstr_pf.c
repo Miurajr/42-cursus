@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:06:46 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:34 by healexan         ###   ########.fr       */
+/*   Created: 2022/11/17 16:51:12 by healexan          #+#    #+#             */
+/*   Updated: 2023/01/16 17:43:45 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_putstr_pf(char *s)
 {
 	int	i;
 
 	i = 0;
-	while (s[i] != c)
+	if (s != NULL)
 	{
-		if (s[i] == '\0')
-			return (NULL);
-		i++;
+		while (s[i])
+		{
+			ft_putchar_pf(s[i]);
+			i++;
+		}		
 	}
-	return ((char *)s + i);
+	else
+	{
+		return (ft_putstr_pf("(null)"));
+	}
+	return (i);
 }
 
 /* int	main(void)
 {
-	char s[] = "bicicleta";
-	char c = 'c';
-	printf("%s\n", ft_strchr(s, c));
+	ft_putstr("só funciona12345\n");
+	return (0);
 }
  */

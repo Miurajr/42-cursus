@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:06:46 by healexan          #+#    #+#             */
-/*   Updated: 2022/12/02 16:09:34 by healexan         ###   ########.fr       */
+/*   Created: 2023/02/22 20:04:01 by healexan          #+#    #+#             */
+/*   Updated: 2023/02/22 20:04:03 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef MINITALK_h
+# define MINITALK_H
 
-char	*ft_strchr(const char *s, int c)
-{
-	int	i;
+# include <signal.h>
+# include "../libft/libft.h"
 
-	i = 0;
-	while (s[i] != c)
-	{
-		if (s[i] == '\0')
-			return (NULL);
-		i++;
-	}
-	return ((char *)s + i);
-}
-
-/* int	main(void)
-{
-	char s[] = "bicicleta";
-	char c = 'c';
-	printf("%s\n", ft_strchr(s, c));
-}
- */
+#endif
