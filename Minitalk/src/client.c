@@ -6,7 +6,7 @@
 /*   By: healexan <healexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:35:48 by healexan          #+#    #+#             */
-/*   Updated: 2023/02/28 20:16:16 by healexan         ###   ########.fr       */
+/*   Updated: 2023/03/01 21:01:48 by healexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	args_check(int argc, char **argv)
 	i = -1;
 	if (argc != 3)
 	{
-		ft_printf("invalid number of params");
+		ft_printf("invalid number of params\nInsert the PID and the message to be broadcast.");
 		exit(EXIT_FAILURE);
 	}
 	while(argv[1][++i])
@@ -69,7 +69,7 @@ void	config_signals(void)
 {
 	struct sigaction new_sig;
 
-	new.sig.sa_handler = &sig_handler;
+	new_sig.sa_handler = &sig_handler;
 	new_sig.sa_flags = SA_SIGINFO;
 	if (sigaction(SIGUSR1, &new_sig, NULL) == -1)
 		ft_printf("Fail to change SIGUSR1");
